@@ -36,6 +36,53 @@
   ======================================================== -->
 </head>
 
+
+
+
+<script>
+  const form = document.getElementById("contact-form");
+  const loading = form.querySelector(".loading");
+  const error = form.querySelector(".error-message");
+  const success = form.querySelector(".sent-message");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    loading.style.display = "block";
+    error.style.display = "none";
+    success.style.display = "none";
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: { Accept: "application/json" },
+      });
+
+      loading.style.display = "none";
+
+      if (response.ok) {
+        success.style.display = "block";
+        form.reset();
+      } else {
+        const data = await response.json();
+        error.innerText = data.error || "Something went wrong.";
+        error.style.display = "block";
+      }
+    } catch (err) {
+      loading.style.display = "none";
+      error.innerText = "Network error or service unreachable.";
+      error.style.display = "block";
+    }
+  });
+</script>
+
+
+
+
+
+
 <body class="index-page">
 
   <header id="header" class="header dark-background d-flex flex-column">
@@ -144,37 +191,41 @@
 
         <div class="row gy-4">
 
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item">
-              <i class="bi bi-emoji-smile"></i>
-              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Happy Clients</strong> <span>consequuntur quae</span></p>
-            </div>
-          </div><!-- End Stats Item -->
+      <div class="col-lg-3 col-md-6">
+        <div class="stats-item">
+          <i class="bi bi-emoji-smile"></i>
+          <span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1" class="purecounter"></span>
+          <p><strong>Happy Clients</strong> <span>Across various industries</span></p>
+        </div>
+      </div><!-- End Stats Item -->
 
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item">
-              <i class="bi bi-journal-richtext"></i>
-              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Projects</strong> <span>adipisci atque cum quia aut</span></p>
-            </div>
-          </div><!-- End Stats Item -->
 
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item">
-              <i class="bi bi-headset"></i>
-              <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Hours Of Support</strong> <span>aut commodi quaerat</span></p>
-            </div>
-          </div><!-- End Stats Item -->
+      <div class="col-lg-3 col-md-6">
+        <div class="stats-item">
+          <i class="bi bi-journal-richtext"></i>
+          <span data-purecounter-start="0" data-purecounter-end="8" data-purecounter-duration="1" class="purecounter"></span>
+          <p><strong>Projects</strong> <span>Successfully delivered</span></p>
+        </div>
+      </div><!-- End Stats Item -->
 
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item">
-              <i class="bi bi-people"></i>
-              <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Hard Workers</strong> <span>rerum asperiores dolor</span></p>
-            </div>
-          </div><!-- End Stats Item -->
+
+        <div class="col-lg-3 col-md-6">
+          <div class="stats-item">
+            <i class="bi bi-briefcase"></i>
+            <span data-purecounter-start="0" data-purecounter-end="2" data-purecounter-duration="1" class="purecounter"></span>
+            <p><strong>Years of Experience</strong> <span>Professional Development</span></p>
+          </div>
+        </div><!-- End Stats Item -->
+
+      <div class="col-lg-3 col-md-6">
+        <div class="stats-item">
+          <i class="bi bi-code-slash"></i>
+          <span data-purecounter-start="0" data-purecounter-end="15000" data-purecounter-duration="1"
+            class="purecounter"></span>
+          <p><strong>Lines of Code</strong> <span>Written with precision</span></p>
+        </div>
+      </div><!-- End Stats Item -->
+
 
         </div>
 
@@ -316,14 +367,14 @@ Explore how I've delivered value across industries using Python, SQL, Power BI, 
               </div>
             </div>
 
-            <!-- E-commerce Sales Analytics -->
+            <!-- NACON Sales Dashboard -->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-tableau">
               <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/app-1.jpg" class="img-fluid" alt="">
+                <img src="assets/img/portfolio/tableau1.png" class="img-fluid" alt="">
                 <div class="portfolio-info">
-                  <h4>E-commerce Sales Analytics</h4>
-                  <p>Advanced Tableau dashboard for e-commerce performance analysis</p>
-                  <a href="assets/img/portfolio/app-1.jpg" title="E-commerce Analytics" data-gallery="portfolio-gallery-tableau" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <h4>NACON Sales Dashboard</h4>
+                  <p>NACON Sales Dashboard</p>
+                  <a href="assets/img/portfolio/tableau2.png" title="E-commerce Analytics" data-gallery="portfolio-gallery-tableau" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   <a href="tableau-sales-analysis-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
@@ -332,12 +383,12 @@ Explore how I've delivered value across industries using Python, SQL, Power BI, 
             <!-- Financial Analytics Dashboard -->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-powerbi">
               <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/branding-1.jpg" class="img-fluid" alt="">
+                <img src="assets/img/portfolio/bi1.png" class="img-fluid" alt="">
                 <div class="portfolio-info">
-                  <h4>Financial Analytics Dashboard</h4>
-                  <p>Comprehensive Power BI dashboard for investment analysis</p>
-                  <a href="assets/img/portfolio/branding-1.jpg" title="Financial Analytics" data-gallery="portfolio-gallery-powerbi" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="powerbi-financial-dashboard-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <h4>Human Resource Dashboard</h4>
+                  <p>Comprehensive Power BI dashboard for Human Resource</p>
+                  <a href="assets/img/portfolio/bi2.png" title="Financial Analytics" data-gallery="portfolio-gallery-powerbi" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="hr-dashboard-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div>
@@ -358,31 +409,15 @@ Explore how I've delivered value across industries using Python, SQL, Power BI, 
             <!-- Data Science Project 1 -->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
               <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/app-2.jpg" class="img-fluid" alt="">
+                <img src="assets/img/portfolio/ML6.png" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>Predictive Analytics Model</h4>
                   <p>Machine learning model for predicting customer behavior</p>
-                  <a href="assets/img/portfolio/app-2.jpg" title="Data Science Project" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <a href="assets/img/portfolio/ML6.png" title="Data Science Project" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="ML-Details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div>
-
-            <!-- Data Science Project 2 -->
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/app-3.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>GIS Data Analysis</h4>
-                  <p>Spatial analysis and visualization of geographic data</p>
-                  <a href="assets/img/portfolio/app-3.jpg" title="GIS Project" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div>
-
-          </div><!-- End Portfolio Container -->
-
         </div>
 
       </div>
@@ -540,91 +575,40 @@ Explore how I've delivered value across industries using Python, SQL, Power BI, 
 </section><!-- /Testimonials Section -->
 
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
+<form action="https://formspree.io/f/mqaqoykb" method="POST" class="php-email-form" data-aos="fade-up"
+  data-aos-delay="200" id="contact-form">
+  <div class="row gy-4">
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
-        <p>Feel free to reach out to discuss collaborations, projects, or just to say hello—I'm always open to connecting.</p>
-      </div><!-- End Section Title -->
+    <div class="col-md-6">
+      <label for="name-field" class="pb-2">Your Name</label>
+      <input type="text" name="name" id="name-field" class="form-control" required>
+    </div>
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="col-md-6">
+      <label for="email-field" class="pb-2">Your Email</label>
+      <input type="email" name="email" id="email-field" class="form-control" required>
+    </div>
 
-        <div class="row gy-4">
+    <div class="col-md-12">
+      <label for="subject-field" class="pb-2">Subject</label>
+      <input type="text" name="subject" id="subject-field" class="form-control" required>
+    </div>
 
-          <div class="col-lg-5">
+    <div class="col-md-12">
+      <label for="message-field" class="pb-2">Message</label>
+      <textarea name="message" id="message-field" class="form-control" rows="10" required></textarea>
+    </div>
 
-            <div class="info-wrap">
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-                <i class="bi bi-geo-alt flex-shrink-0"></i>
-                <div>
-                  <h3>Address</h3>
-                  <p>Islamabad Pakistan</p>
-                </div>
-              </div><!-- End Info Item -->
+    <div class="col-md-12 text-center">
+      <div class="loading" style="display:none;">Loading...</div>
+      <div class="error-message" style="display:none; color:red;"></div>
+      <div class="sent-message" style="display:none; color:green;">Your message has been sent. Thank you!</div>
+      <button type="submit">Send Message</button>
+    </div>
 
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-                <i class="bi bi-telephone flex-shrink-0"></i>
-                <div>
-                  <h3>Call Us</h3>
-                  <p>+92 3498938582</p>
-                </div>
-              </div><!-- End Info Item -->
+  </div>
+</form>
 
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-                <i class="bi bi-envelope flex-shrink-0"></i>
-                <div>
-                  <h3>Email Us</h3>
-                  <p>waqasdostdost0092@gmail.com</p>
-                </div>
-              </div><!-- End Info Item -->
-
-              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.78314118045!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus" frameborder="0" style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-          </div>
-
-          <div class="col-lg-7">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
-              <div class="row gy-4">
-
-                <div class="col-md-6">
-                  <label for="name-field" class="pb-2">Your Name</label>
-                  <input type="text" name="name" id="name-field" class="form-control" required="">
-                </div>
-
-                <div class="col-md-6">
-                  <label for="email-field" class="pb-2">Your Email</label>
-                  <input type="email" class="form-control" name="email" id="email-field" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <label for="subject-field" class="pb-2">Subject</label>
-                  <input type="text" class="form-control" name="subject" id="subject-field" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <label for="message-field" class="pb-2">Message</label>
-                  <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
-                </div>
-
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                  <button type="submit">Send Message</button>
-                </div>
-
-              </div>
-            </form>
-          </div><!-- End Contact Form -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Contact Section -->
 
   </main>
 
