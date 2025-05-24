@@ -38,7 +38,6 @@
 
 
 
-
 <script>
   const form = document.getElementById("contact-form");
   const loading = form.querySelector(".loading");
@@ -57,28 +56,25 @@
       const response = await fetch(form.action, {
         method: "POST",
         body: formData,
-        headers: { Accept: "application/json" },
+        headers: {
+          'Accept': 'application/json'
+        }
       });
-
-      loading.style.display = "none";
 
       if (response.ok) {
         success.style.display = "block";
         form.reset();
       } else {
-        const data = await response.json();
-        error.innerText = data.error || "Something went wrong.";
-        error.style.display = "block";
+        throw new Error('Form submission failed');
       }
     } catch (err) {
-      loading.style.display = "none";
-      error.innerText = "Network error or service unreachable.";
+      error.textContent = "There was a problem sending your message. Please try again later.";
       error.style.display = "block";
+    } finally {
+      loading.style.display = "none";
     }
   });
 </script>
-
-
 
 
 
@@ -575,39 +571,51 @@ Explore how I've delivered value across industries using Python, SQL, Power BI, 
 </section><!-- /Testimonials Section -->
 
 
-<form action="https://formspree.io/f/mqaqoykb" method="POST" class="php-email-form" data-aos="fade-up"
-  data-aos-delay="200" id="contact-form">
-  <div class="row gy-4">
+<!-- Contact Section -->
+<section id="contact" class="contact section">
 
-    <div class="col-md-6">
-      <label for="name-field" class="pb-2">Your Name</label>
-      <input type="text" name="name" id="name-field" class="form-control" required>
-    </div>
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Contact</h2>
+    <p>Get in touch with me for projects, collaborations, or just to say hello!</p>
+  </div><!-- End Section Title -->
 
-    <div class="col-md-6">
-      <label for="email-field" class="pb-2">Your Email</label>
-      <input type="email" name="email" id="email-field" class="form-control" required>
-    </div>
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <form action="https://formspree.io/f/mqaqoykb" method="POST" class="php-email-form" id="contact-form">
+      <div class="row gy-4">
 
-    <div class="col-md-12">
-      <label for="subject-field" class="pb-2">Subject</label>
-      <input type="text" name="subject" id="subject-field" class="form-control" required>
-    </div>
+        <div class="col-md-6">
+          <label for="name-field" class="pb-2">Your Name</label>
+          <input type="text" name="name" id="name-field" class="form-control" required>
+        </div>
 
-    <div class="col-md-12">
-      <label for="message-field" class="pb-2">Message</label>
-      <textarea name="message" id="message-field" class="form-control" rows="10" required></textarea>
-    </div>
+        <div class="col-md-6">
+          <label for="email-field" class="pb-2">Your Email</label>
+          <input type="email" name="email" id="email-field" class="form-control" required>
+        </div>
 
-    <div class="col-md-12 text-center">
-      <div class="loading" style="display:none;">Loading...</div>
-      <div class="error-message" style="display:none; color:red;"></div>
-      <div class="sent-message" style="display:none; color:green;">Your message has been sent. Thank you!</div>
-      <button type="submit">Send Message</button>
-    </div>
+        <div class="col-md-12">
+          <label for="subject-field" class="pb-2">Subject</label>
+          <input type="text" name="subject" id="subject-field" class="form-control" required>
+        </div>
 
+        <div class="col-md-12">
+          <label for="message-field" class="pb-2">Message</label>
+          <textarea name="message" id="message-field" class="form-control" rows="6" required></textarea>
+        </div>
+
+        <div class="col-md-12 text-center">
+          <div class="loading" style="display:none;">Loading...</div>
+          <div class="error-message" style="display:none;"></div>
+          <div class="sent-message" style="display:none;">Your message has been sent. Thank you!</div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </div>
+
+      </div>
+    </form>
   </div>
-</form>
+
+</section><!-- /Contact Section -->
 
 
   </main>
