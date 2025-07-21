@@ -37,31 +37,6 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
-  <style>
-    .portfolio-category-title {
-      width: 100%;
-      text-align: left;
-      margin-top: 40px;
-      margin-bottom: 0px;
-      font-size: 24px;
-      font-weight: 700;
-      color: #444444;
-      text-transform: uppercase;
-      position: relative;
-      padding-bottom: 15px;
-    }
-
-    .portfolio-category-title::after {
-      content: "";
-      position: absolute;
-      display: block;
-      width: 50px;
-      height: 3px;
-      background: #18d26e;
-      left: 0;
-      bottom: 0;
-    }
-  </style>
 </head>
 
 <script>
@@ -873,6 +848,47 @@ Skilled in building efficient ETL pipelines, crafting insightful dashboards, and
     
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const portfolioFilters = document.querySelectorAll('.portfolio-filters li');
+    
+        // Function to set filter from URL hash
+        const setFilterFromURL = () => {
+          const hash = window.location.hash;
+          if (hash.startsWith('#filter=')) {
+            const filterValue = hash.substring(8); // Get the part after '#filter='
+            const filterSelector = filterValue === 'all' ? '*' : `.${filterValue}`;
+    
+            // Find the corresponding filter button and trigger a click
+            const filterButton = document.querySelector(`.portfolio-filters li[data-filter='${filterSelector}']`);
+            if (filterButton) {
+              filterButton.click();
+            }
+          }
+        };
+    
+        // Add click listeners to update URL hash
+        portfolioFilters.forEach(filter => {
+          filter.addEventListener('click', function(e) {
+            let filterValue = this.getAttribute('data-filter');
+            if (filterValue === '*') {
+              window.location.hash = '#filter=all';
+            } else {
+              // Remove the leading dot
+              window.location.hash = `#filter=${filterValue.substring(1)}`;
+            }
+          });
+        });
+    
+        // Set filter on initial page load
+        setFilterFromURL();
+    
+        // Listen for hash changes to update filter
+        window.addEventListener('hashchange', setFilterFromURL);
+      });
+    </script>
+    
     </body>
     
     </html>
