@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Portfolio Details - Mastodon Social Explore Page Scraper</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Poppins&family=Raleway&display=swap"
+        rel="stylesheet" />
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+
+    <style>
+        .portfolio-details-slider {
+            width: 100%;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        .swiper-slide img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-height: 400px;
+            object-fit: contain;
+        }
+    </style>
+</head>
+
+<body class="portfolio-details-page">
+    <header id="header" class="header dark-background d-flex flex-column">
+        <i class="header-toggle d-xl-none bi bi-list"></i>
+        <div class="profile-img">
+            <img src="assets/img/my-profile-img.jpg" alt="" class="img-fluid rounded-circle" />
+        </div>
+        <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+            <h1 class="sitename">Waqas Dost</h1>
+        </a>
+        <div class="social-links text-center">
+            <a href="https://x.com/waqas_dost_" class="twitter" target="_blank"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://www.facebook.com/waqasdost0" class="facebook" target="_blank"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/dost_waqas_" class="instagram" target="_blank"><i class="bi bi-instagram"></i></a>
+            <a href="https://github.com/dost0092" class="github" target="_blank"><i class="bi bi-github"></i></a>
+            <a href="https://www.linkedin.com/in/waqas-dost-95443126b" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
+        </div>
+        <nav id="navmenu" class="navmenu">
+            <ul>
+                <li><a href="index.html#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
+                <li><a href="index.html#about"><i class="bi bi-person navicon"></i> About</a></li>
+                <li><a href="index.html#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
+                <li><a href="index.html#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
+                <li><a href="index.html#services"><i class="bi bi-hdd-stack navicon"></i> Services</a></li>
+                <li><a href="index.html#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="page-title dark-background">
+            <div class="container d-lg-flex justify-content-between align-items-center">
+                <h1 class="mb-2 mb-lg-0">Mastodon Social Explore Page Scraper</h1>
+                <nav class="breadcrumbs">
+                    <ol>
+                        <li><a href="index.html">Home</a></li>
+                        <li class="current">Portfolio Details</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <section id="portfolio-details" class="portfolio-details section">
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+                <div class="row gy-4">
+                    <div class="col-lg-8">
+                        <div class="portfolio-details-slider swiper init-swiper">
+                            <script type="application/json" class="swiper-config">
+                {
+                  "loop": true,
+                  "speed": 600,
+                  "autoplay": {
+                    "delay": 5000
+                  },
+                  "slidesPerView": "auto",
+                  "pagination": {
+                    "el": ".swiper-pagination",
+                    "type": "bullets",
+                    "clickable": true
+                  }
+                }
+              </script>
+                            <div class="swiper-wrapper align-items-center">
+                                <div class="swiper-slide"><img src="assets/img/portfolio/scraping3.png" alt="Mastodon Scraper Screenshot"
+                                        class="img-fluid" /></div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+                            <h3>Project information</h3>
+                            <ul>
+                                <li><strong>Category</strong>: Web Scraping & Data Collection</li>
+                                <li><strong>Project date</strong>: April, 2024</li>
+                                <li><strong>Project URL</strong>: <a href="#">View on GitHub</a></li>
+                            </ul>
+                        </div>
+                        <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+                            <h2>Mastodon Social Explore Page Scraper</h2>
+                            <p>This project is a fully automated Python-based scraper built to extract multimedia (images, videos, audio) and textual content from the Mastodon Social Explore page. It navigates dynamically loaded content using Selenium, performs structured data extraction, and saves the results in organized local folders and CSV files for downstream use in data analysis, content monitoring, or dataset creation.</p>
+                            <ul>
+                                <li><strong>Objectives:</strong>
+                                    <ul>
+                                        <li>Extract images, videos, audio files, and text posts from Mastodon's public Explore feed.</li>
+                                        <li>Automate infinite scrolling to dynamically load more content.</li>
+                                        <li>Save extracted media to local folders with clean, deduplicated filenames.</li>
+                                        <li>Store text and media URLs in structured .csv files.</li>
+                                        <li>Enable reuse for data mining, content curation, or research purposes.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Technical Details:</strong>
+                                    <ul>
+                                        <li><strong>Image Scraping:</strong> Uses Selenium to scroll the page and detect &lt;img&gt; elements. Filters valid image URLs (JPEG, PNG), downloads and stores them locally in /image folder, handles filename parsing and uniqueness.</li>
+                                        <li><strong>Audio Scraping:</strong> Captures &lt;audio&gt; tags dynamically loaded on the Explore page, extracts .mp3, .ogg, or streamable audio URLs, downloads to /Audio directory with error handling.</li>
+                                        <li><strong>Video Scraping:</strong> Identifies &lt;video&gt; tags and collects .mp4 or video stream links, scrolls through page to ensure all content is loaded, saves video links to mastodon_videos.csv.</li>
+                                        <li><strong>Text Content Extraction:</strong> Leverages BeautifulSoup with headless Chrome (via Selenium), parses loaded HTML content, filters meaningful human-readable text, saves content in mastodon_text.csv with proper encoding and cleanup.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Output Structure:</strong>
+                                    <pre class="bg-light p-3 rounded">
+project-root/
+│
+├── image/                   # All downloaded images
+├── Audio/                   # Downloaded audio files
+├── videos/                 
+│   └── mastodon_videos.csv  # Extracted video links
+├── text/                  
+│   └── mastodon_text.csv    # Extracted text content
+├── scraper_images.py
+├── scraper_audio.py
+├── scraper_videos.py
+└── scraper_text.py
+                                    </pre>
+                                </li>
+                                <li><strong>Key Features:</strong>
+                                    <ul>
+                                        <li>Auto Scrolling: Smoothly scrolls until all content is loaded.</li>
+                                        <li>Intelligent Filtering: Ensures only usable media/text content is saved.</li>
+                                        <li>Data Preservation: Downloads assets with original names when possible.</li>
+                                        <li>Structured Outputs: CSV and folder-based layout for further analysis.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Use Cases:</strong>
+                                    <ul>
+                                        <li>Media analysis from social platforms</li>
+                                        <li>Dataset building for computer vision or audio modeling</li>
+                                        <li>Social content archiving</li>
+                                        <li>Content moderation or trend research</li>
+                                        <li>Real-time scraping base for AI-powered agents</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Technologies Used:</strong>
+                                    <table class="table table-bordered">
+                                        <thead><tr><th>Tool</th><th>Purpose</th></tr></thead>
+                                        <tbody>
+                                            <tr><td>Selenium</td><td>Browser automation + dynamic content loading</td></tr>
+                                            <tr><td>BeautifulSoup</td><td>HTML parsing & text extraction</td></tr>
+                                            <tr><td>Requests</td><td>File downloading</td></tr>
+                                            <tr><td>ChromeDriver</td><td>Chrome automation</td></tr>
+                                            <tr><td>CSV / OS</td><td>File management and data storage</td></tr>
+                                            <tr><td>PIL (optional)</td><td>Image validation (if required)</td></tr>
+                                        </tbody>
+                                    </table>
+                                </li>
+                                <li><strong>Suggested Improvements (Next Steps):</strong>
+                                    <ul>
+                                        <li>Add proxy support for large scraping sessions</li>
+                                        <li>Incorporate time-based post filtering (e.g., latest only)</li>
+                                        <li>Enable metadata extraction (usernames, timestamps, tags)</li>
+                                        <li>Build Streamlit dashboard to preview results live</li>
+                                        <li>Deploy on a schedule with Docker or Cron</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer" class="footer position-relative light-background">
+        <div class="container">
+            <div class="copyright text-center">
+                <p>© <span>Copyright</span> <strong class="px-1 sitename">Waqas Dost</strong> <span>All Rights
+                        Reserved</span></p>
+            </div>
+            <div class="credits">Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a></div>
+        </div>
+    </footer>
+
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+    <div id="preloader"></div>
+
+    <!-- JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

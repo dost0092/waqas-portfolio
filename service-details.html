@@ -40,7 +40,7 @@
     </div>
 
     <a href="index.html" class="logo d-flex align-items-center justify-content-center">
-      <h1 class="sitename">Alex Smith</h1>
+      <h1 class="sitename">Waqas Dost</h1>
     </a>
 
     <div class="social-links text-center">
@@ -53,31 +53,12 @@
 
     <nav id="navmenu" class="navmenu">
       <ul>
-        <li><a href="#hero"><i class="bi bi-house navicon"></i>Home</a></li>
-        <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
-        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
-        <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
-        <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i> Services</a></li>
-        <li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>Dropdown</span> <i
-              class="bi bi-chevron-down toggle-dropdown"></i></a>
-          <ul>
-            <li><a href="#">Dropdown 1</a></li>
-            <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i
-                  class="bi bi-chevron-down toggle-dropdown"></i></a>
-              <ul>
-                <li><a href="#">Deep Dropdown 1</a></li>
-                <li><a href="#">Deep Dropdown 2</a></li>
-                <li><a href="#">Deep Dropdown 3</a></li>
-                <li><a href="#">Deep Dropdown 4</a></li>
-                <li><a href="#">Deep Dropdown 5</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Dropdown 2</a></li>
-            <li><a href="#">Dropdown 3</a></li>
-            <li><a href="#">Dropdown 4</a></li>
-          </ul>
-        </li>
-        <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+        <li><a href="index.html#hero"><i class="bi bi-house navicon"></i>Home</a></li>
+        <li><a href="index.html#about"><i class="bi bi-person navicon"></i> About</a></li>
+        <li><a href="index.html#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
+        <li><a href="index.html#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
+        <li><a href="index.html#services"><i class="bi bi-hdd-stack navicon"></i> Services</a></li>
+        <li><a href="index.html#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
       </ul>
     </nav>
 
@@ -105,37 +86,479 @@
 
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
             <div class="services-list">
-              <a href="#">Geospatial Engineering</a>
-              <a href="#">API Development</a>
-              <a href="#">Web Scraping</a>
-              <a href="#">Visualization</a>
-              <a href="#">Machine Learning</a>
+              <a href="#geospatial">Geospatial Data Engineering</a>
+              <a href="#api">API Development</a>
+              <a href="#scraping">Web Scraping & Data Collection</a>
+              <a href="#dashboard">Dashboard & Data Visualization</a>
+              <a href="#cloud">Cloud Deployment & DevOps</a>
+              <a href="#pipeline">Data Pipeline Automation</a>
+              <a href="#ml">Machine Learning & Analytics</a>
             </div>
-
-            <h4>Tailored Data Engineering Solutions</h4>
-            <p>Delivering scalable, cloud-ready pipelines, APIs, and visual tools for geospatial and urban data
-              ecosystems.</p>
+            <h4>Comprehensive Data Science & Engineering Solutions</h4>
+            <p>With a strong background in geospatial data, ETL pipelines, API development, and cloud deployment, I deliver robust, scalable, and insightful solutions for modern data challenges. Explore each service below for details and real project examples.</p>
           </div>
 
           <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-            <img src="assets/img/services.jpg" alt="" class="img-fluid services-img">
-            <h3>Web Scraping & Data Collection</h3>
-            <p>
-              Using Python libraries like Beautiful Soup, Selenium, and Requests, I build efficient scrapers and
-              crawlers to extract structured and unstructured data from online sources.
-            </p>
-            <ul>
-              <li><i class="bi bi-check-circle"></i> <span>Automated scraping of zoning and permit data from municipal
-                  websites</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Integration with APIs for real-time property listings and
-                  ownership data</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Data normalization and deduplication for analysis-ready
-                  datasets</span></li>
-            </ul>
-            <p>
-              This service ensures clients have reliable, timely data for real estate analytics, land use assessments,
-              or any application where structured external data is critical.
-            </p>
+            <!-- Geospatial Data Engineering -->
+            <section id="geospatial" class="mb-5">
+              <img src="assets/img/portfolio/cities_dash_demo.jpg" alt="Cities Dashboard" class="img-fluid services-img mb-3">
+              <h3>Geospatial Data Engineering</h3>
+              <p>Designing robust ETL pipelines to extract, transform, and load zoning and land-use data into spatial databases like PostgreSQL/PostGIS. My work at Zoneomics involved managing complex geospatial datasets, integrating GIS data, and ensuring data quality for urban analytics and land use planning.</p>
+              <ul>
+                <li><i class="bi bi-check-circle"></i> ETL workflows for zoning, permits, and land use data</li>
+                <li><i class="bi bi-check-circle"></i> Integration of GIS spatial data into PostgreSQL/PostGIS</li>
+                <li><i class="bi bi-check-circle"></i> Data validation, normalization, and enrichment</li>
+                <li><i class="bi bi-check-circle"></i> Real-world project: <strong>Cities Dashboard</strong> (Retool + PostgreSQL)</li>
+                <li><i class="bi bi-check-circle"></i> Real-world project: <strong>ETL Pipeline with Python, PostgreSQL, and AWS RDS</strong> (Python, Pandas, psycopg2, Folium, PostgreSQL, AWS RDS)</li>
+                <li><i class="bi bi-check-circle"></i> Real-world project: <strong>Traffic Hotspot Analysis with Grafana & Streamlit</strong> (Python, pyshp, CSV, Grafana, Streamlit)</li>
+                <li><i class="bi bi-check-circle"></i> Real-world project: <strong>Zoning & Land Use Q&A App using RAG</strong> (Python, Streamlit, PostgreSQL, PostGIS, LLM/RAG)</li>
+              </ul>
+              <div class="card mt-4 mb-4">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="assets/img/portfolio/rag.png" class="img-fluid rounded-start" alt="RAG Zoning App Screenshot">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Zoning & Land Use Q&A App using RAG</h5>
+                      <p class="card-text"><strong>Type:</strong> Data Science · Urban Planning · Geospatial AI<br>
+                        <strong>Tech Stack:</strong> Python, Streamlit, PostgreSQL, PostGIS, LLM/RAG, APIs</p>
+                      <p class="card-text"><strong>Overview:</strong> An intelligent Q&A app for zoning regulations using geospatial coordinates, combining spatial database queries, reverse geocoding, image retrieval, and a RAG system with LLaMA3 to provide concise legal interpretations.</p>
+                      <ul>
+                        <li>Accepts lat/lng input from users</li>
+                        <li>Identifies zoning region and retrieves permitted land uses</li>
+                        <li>Reverse geocodes coordinates and displays zone image</li>
+                        <li>Generates intelligent, regulatory-compliant responses using RAG</li>
+                      </ul>
+                      <p class="card-text"><strong>Technical Workflow:</strong></p>
+                      <ul>
+                        <li>Streamlit interface captures lat/lng</li>
+                        <li>PostGIS query locates intersecting geometry</li>
+                        <li>Nominatim/Mapbox for reverse geocoding</li>
+                        <li>Zoneomics API for zone image</li>
+                        <li>RAG setup with SentenceTransformer and LLaMA3</li>
+                        <li>Custom prompt generation for LLM</li>
+                      </ul>
+                      <p class="card-text"><strong>Key Features:</strong> Live zoning map, integrated RAG for regulatory understanding, dynamic legal zoning Q&A, hybrid geospatial + LLM intelligence</p>
+                      <p class="card-text"><strong>Technologies Used:</strong> Python, Streamlit, PostgreSQL, PostGIS, psycopg2, requests, Transformers, Langchain, SambaNova (LLaMA3), FAISS, Pandas, Zoneomics API</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- API Development -->
+            <section id="api" class="mb-5">
+              <img src="assets/img/portfolio/api_dashboard_demo.png" alt="City API Visualization" class="img-fluid services-img mb-3">
+              <h3>API Development</h3>
+              <p>Building scalable RESTful APIs to serve data and automate access to complex datasets for clients and internal tools. I have developed APIs for city data, user monitoring, and analytics, ensuring secure and efficient data delivery.</p>
+              <ul>
+                <li><i class="bi bi-check-circle"></i> RESTful API design and implementation (Flask, FastAPI)</li>
+                <li><i class="bi bi-check-circle"></i> Authentication, rate limiting, and documentation</li>
+                <li><i class="bi bi-check-circle"></i> Real-world project: <strong>City API Visualization</strong> (Flask API + Custom UI)</li>
+              </ul>
+            </section>
+
+            <!-- Web Scraping & Data Collection -->
+            <section id="scraping" class="mb-5">
+              <img src="assets/img/portfolio/scraping1.png" alt="Web Scraping Project" class="img-fluid services-img mb-3">
+              <h3>Web Scraping & Data Collection</h3>
+              <p>Developing automated scrapers using Beautiful Soup, Selenium, and APIs to collect zoning, permit, and real estate data from public sources. My scrapers are designed for reliability, efficiency, and data quality, supporting downstream analytics and reporting.</p>
+              <ul>
+                <li><i class="bi bi-check-circle"></i> Automated extraction of structured and unstructured data</li>
+                <li><i class="bi bi-check-circle"></i> Integration with APIs for real-time data</li>
+                <li><i class="bi bi-check-circle"></i> Data normalization, deduplication, and cleaning</li>
+                <li><i class="bi bi-check-circle"></i> Real-world project: <strong>Politifact Scraper</strong> (Python, BeautifulSoup, Selenium)</li>
+                <li><i class="bi bi-check-circle"></i> Real-world project: <strong>Mastodon Social Explore Page Scraper</strong> (Python, Selenium, BeautifulSoup, Requests, CSV, Pandas)</li>
+                <li><i class="bi bi-check-circle"></i> Real-world project: <strong>Altnews Website Scraper</strong> (Python, Selenium, BeautifulSoup, Requests, CSV)</li>
+              </ul>
+              <div class="card mt-4 mb-4">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="assets/img/portfolio/scraping3.png" class="img-fluid rounded-start" alt="Mastodon Scraper Screenshot">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Mastodon Social Explore Page Scraper</h5>
+                      <p class="card-text"><strong>Type:</strong> Web Scraping · Data Collection · Automation<br>
+                        <strong>Tech Stack:</strong> Python, Selenium, BeautifulSoup, Requests, CSV, Pandas</p>
+                      <p class="card-text"><strong>Overview:</strong> Fully automated Python-based scraper to extract multimedia (images, videos, audio) and textual content from Mastodon's Explore page. Handles infinite scrolling, structured extraction, and organized saving for downstream analysis or dataset creation.</p>
+                      <ul>
+                        <li>Extracts images, videos, audio, and text posts from Mastodon's public Explore feed</li>
+                        <li>Automates infinite scrolling to load more content</li>
+                        <li>Saves media to local folders with deduplicated filenames</li>
+                        <li>Stores text and media URLs in structured CSV files</li>
+                        <li>Reusable for data mining, content curation, or research</li>
+                      </ul>
+                      <p class="card-text"><strong>Technical Details:</strong></p>
+                      <ul>
+                        <li><strong>Image Scraping:</strong> Uses Selenium to scroll and detect &lt;img&gt; elements, filters valid URLs, downloads to /image folder</li>
+                        <li><strong>Audio Scraping:</strong> Captures &lt;audio&gt; tags, extracts .mp3/.ogg, downloads to /Audio</li>
+                        <li><strong>Video Scraping:</strong> Identifies &lt;video&gt; tags, collects .mp4/streams, saves links to mastodon_videos.csv</li>
+                        <li><strong>Text Extraction:</strong> BeautifulSoup + Selenium, parses HTML, filters human-readable text, saves to mastodon_text.csv</li>
+                      </ul>
+                      <p class="card-text"><strong>Output Structure:</strong></p>
+                      <ul>
+                        <li>image/ — Downloaded images</li>
+                        <li>Audio/ — Downloaded audio files</li>
+                        <li>videos/mastodon_videos.csv — Video links</li>
+                        <li>text/mastodon_text.csv — Text content</li>
+                        <li>Python scripts for each media type</li>
+                      </ul>
+                      <p class="card-text"><strong>Key Features:</strong> Auto scrolling, intelligent filtering, data preservation, structured outputs</p>
+                      <p class="card-text"><strong>Use Cases:</strong> Media analysis, dataset building, content archiving, moderation, AI research</p>
+                      <p class="card-text"><strong>Technologies Used:</strong> Selenium, BeautifulSoup, Requests, ChromeDriver, CSV/OS, PIL (optional)</p>
+                      <p class="card-text"><strong>Suggested Improvements:</strong> Proxy support, time-based filtering, metadata extraction, Streamlit dashboard, scheduled deployment</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card mt-4 mb-4">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="assets/img/portfolio/altnews.jpg" class="img-fluid rounded-start" alt="Altnews Scraper Screenshot">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Altnews Website Scraper</h5>
+                      <p class="card-text"><strong>Type:</strong> Web Scraping · News Monitoring · Misinformation Analysis<br>
+                        <strong>Tech Stack:</strong> Python, Selenium, BeautifulSoup, Requests, CSV</p>
+                      <p class="card-text"><strong>Overview:</strong> Python-based tool to extract images, audio, text, and video links from Altnews.in for fact-checking and misinformation research. Handles modern HTML, organizes data for NLP/ML, and is reusable for other news sites.</p>
+                      <ul>
+                        <li>Extracts visual, audio, video, and textual content from Altnews homepage or articles</li>
+                        <li>Handles modern HTML with Selenium and BeautifulSoup</li>
+                        <li>Organizes data in folders and CSVs for downstream use</li>
+                        <li>Reusable for monitoring other news/fact-checking sites</li>
+                      </ul>
+                      <p class="card-text"><strong>Technical Details:</strong></p>
+                      <ul>
+                        <li><strong>Image Scraping:</strong> Navigates and collects <img> tags, downloads to /image</li>
+                        <li><strong>Audio Scraping:</strong> Extracts .mp3/.ogg/.wav links, downloads to /Audio, resolves URLs</li>
+                        <li><strong>Text Extraction:</strong> Collects human-readable text, saves to altnews_text.csv</li>
+                        <li><strong>Video Link Extraction:</strong> Scrolls and collects <video> src, saves to altnews_videos.csv</li>
+                      </ul>
+                      <p class="card-text"><strong>Output Structure:</strong></p>
+                      <ul>
+                        <li>image/ — Downloaded images</li>
+                        <li>Audio/ — Audio files</li>
+                        <li>text/altnews_text.csv — Text content</li>
+                        <li>videos/altnews_videos.csv — Video URLs</li>
+                        <li>Python scripts for each media type</li>
+                      </ul>
+                      <p class="card-text"><strong>Key Features:</strong> Dynamic content loading, absolute URL resolution, clean data output, file management</p>
+                      <p class="card-text"><strong>Use Cases:</strong> Misinformation research, fake news dataset creation, media monitoring, content comparison</p>
+                      <p class="card-text"><strong>Technologies Used:</strong> Selenium, BeautifulSoup, Requests, OS/IO/CSV, PIL (optional)</p>
+                      <p class="card-text"><strong>Suggested Extensions:</strong> Recursive article scraping, metadata extraction, ML integration, database storage, Streamlit dashboard</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Dashboard & Data Visualization -->
+            <section id="dashboard" class="mb-5">
+              <img src="assets/img/portfolio/user_dashboard_demo.jpg" alt="User Monitoring Dashboard" class="img-fluid services-img mb-3">
+              <h3>Dashboard & Data Visualization</h3>
+              <p>Creating interactive dashboards in Tableau, Retool, and Power BI to visualize key metrics, trends, and spatial analytics. My dashboards empower clients to make data-driven decisions with clarity and confidence.</p>
+              <ul>
+                <li><i class="bi bi-check-circle"></i> Custom dashboards for business, HR, and city analytics</li>
+                <li><i class="bi bi-check-circle"></i> Integration with live databases and APIs</li>
+                <li><i class="bi bi-check-circle"></i> Real-world projects: <strong>User Monitoring Dashboard</strong> (Retool), <strong>HR Dashboard</strong> (Power BI), <strong>NACON Sales Dashboard</strong> (Tableau), <strong>LIDA with Streamlit & Advanced Preprocessing</strong> (Python, LIDA, Streamlit, Pandas, OpenAI API), <strong>Sentiment Analysis of COVID-19 Tweets with Plotly</strong> (Python, Pandas, Plotly), <strong>Global Suicide Rates Analysis</strong> (Power BI)</li>
+              </ul>
+              <div class="card mt-4 mb-4">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="assets/img/portfolio/lida.png" class="img-fluid rounded-start" alt="LIDA Streamlit Screenshot">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Revolutionizing Data Visualization: LIDA with Streamlit & Advanced Preprocessing</h5>
+                      <p class="card-text"><strong>Type:</strong> Data Visualization · LLM · Streamlit<br>
+                        <strong>Tech Stack:</strong> Python, LIDA, Streamlit, Pandas, OpenAI API</p>
+                      <p class="card-text"><strong>Overview:</strong> LLM-powered tool for automated data visualization, enhanced with Streamlit integration and advanced preprocessing for robust analytics.</p>
+                      <ul>
+                        <li>Summarizer: Condenses raw data into concise summaries</li>
+                        <li>Goal Explorer: Autonomously generates visualization goals</li>
+                        <li>Visegenerator: Creates visualization goals tailored to the data</li>
+                        <li>Infographic: Produces visually appealing, data-driven infographics</li>
+                      </ul>
+                      <p class="card-text"><strong>Benefits:</strong> Automation, exploration, accessibility, efficiency</p>
+                      <p class="card-text"><strong>Limitations:</strong> LLM training quality, dataset bias, code execution, data volume</p>
+                      <p class="card-text"><strong>Advanced Preprocessing:</strong> Data cleaning, filling, interactive sidebar, dynamic display</p>
+                      <p class="card-text"><strong>Code Highlights:</strong></p>
+                      <pre class="code-sample"># Data cleaning in Streamlit
+clean_data = st.sidebar.checkbox("Drop data")
+fill_data = st.sidebar.checkbox("Fill data")
+
+if clean_data:
+    ... # Drop missing values, show cleaned data
+elif fill_data:
+    ... # Impute missing values, show filled data
+</pre>
+                      <p class="card-text"><strong>Output:</strong></p>
+                      <ul>
+                        <li>Automated visualizations from LIDA</li>
+                        <li>Cleaned and preprocessed datasets</li>
+                        <li>Interactive Streamlit web app</li>
+                      </ul>
+                      <p class="card-text"><strong>Key Features:</strong> LLM-powered automation, advanced preprocessing, Streamlit interactivity</p>
+                      <p class="card-text"><strong>Technologies Used:</strong> Python, LIDA, Streamlit, Pandas, OpenAI API</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card mt-4 mb-4">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="assets/img/portfolio/covid.png" class="img-fluid rounded-start" alt="COVID-19 Tweet Sentiment Analysis">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Unveiling Sentiment Trends: Analyzing COVID-19 Tweets with Plotly</h5>
+                      <p class="card-text"><strong>Type:</strong> Data Visualization · Sentiment Analysis<br>
+                        <strong>Tech Stack:</strong> Python, Pandas, Plotly</p>
+                      <p class="card-text"><strong>Overview:</strong> This project delves into the sentiment surrounding COVID-19 tweets using Plotly to visualize tweet data and gain insights into evolving public perception during the pandemic.</p>
+                      <ul>
+                        <li>Conduct exploratory data analysis (EDA) of tweet data.</li>
+                        <li>Analyze and visualize sentiment trends using Plotly.</li>
+                        <li>Uncover public perception dynamics.</li>
+                      </ul>
+                      <p class="card-text"><strong>Key Features:</strong> Comprehensive EDA, rich sentiment visualizations, actionable insights into public sentiment.</p>
+                      <p class="card-text"><strong>Technologies Used:</strong> Python, Pandas, Plotly</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card mt-4 mb-4">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="assets/img/portfolio/suicide.png" class="img-fluid rounded-start" alt="Global Suicide Rates Analysis">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Exploring Global Suicide Rates: Insights from Power BI Analysis</h5>
+                      <p class="card-text"><strong>Type:</strong> Power BI Analysis · Data Visualization<br>
+                        <strong>Tech Stack:</strong> Power BI</p>
+                      <p class="card-text"><strong>Overview:</strong> This analysis delves into global suicide rates using Power BI to uncover trends, patterns, and regional disparities through interactive visualizations.</p>
+                      <ul>
+                        <li>Tracks temporal evolution of suicide rates with line graphs.</li>
+                        <li>Provides a spatial perspective on geographical variations with maps.</li>
+                        <li>Offers a comparative view of suicide counts by country/region with bar charts.</li>
+                      </ul>
+                      <p class="card-text"><strong>Key Features:</strong> In-depth data analysis, interactive visualizations, policy implications.</p>
+                      <p class="card-text"><strong>Technologies Used:</strong> Power BI</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Cloud Deployment & DevOps -->
+            <section id="cloud" class="mb-5">
+              <img src="assets/img/portfolio/ML4.png" alt="Cloud & DevOps" class="img-fluid services-img mb-3">
+              <h3>Cloud Deployment & DevOps</h3>
+              <p>Deploying applications and services on AWS using tools like Elastic Beanstalk, S3, Docker, and setting up CI/CD pipelines. I ensure reliable, automated delivery of data services and scalable infrastructure for analytics platforms.</p>
+              <ul>
+                <li><i class="bi bi-check-circle"></i> AWS deployment (Elastic Beanstalk, S3, EC2)</li>
+                <li><i class="bi bi-check-circle"></i> Docker containerization and orchestration</li>
+                <li><i class="bi bi-check-circle"></i> CI/CD pipelines with GitHub Actions and Jenkins</li>
+                <li><i class="bi bi-check-circle"></i> Real-world project: <strong>ML Model Deployment</strong> (AWS + Docker)</li>
+              </ul>
+            </section>
+
+            <!-- Data Pipeline Automation -->
+            <section id="pipeline" class="mb-5">
+              <img src="assets/img/portfolio/d2.png" alt="Data Pipeline Automation" class="img-fluid services-img mb-3">
+              <h3>Data Pipeline Automation</h3>
+              <p>Automating data collection, validation, and delivery using Python and SQL to streamline geospatial and land use data workflows. My automated pipelines reduce manual effort, improve data quality, and accelerate analytics.</p>
+              <ul>
+                <li><i class="bi bi-check-circle"></i> End-to-end ETL automation (Python, SQL, Airflow)</li>
+                <li><i class="bi bi-check-circle"></i> Data validation and monitoring</li>
+                <li><i class="bi bi-check-circle"></i> Real-world project: <strong>Automated ETL for Zoning Data</strong></li>
+              </ul>
+            </section>
+
+            <!-- Machine Learning & Analytics -->
+            <section id="ml" class="mb-5">
+              <img src="assets/img/portfolio/ML1.png" alt="Machine Learning Project" class="img-fluid services-img mb-3">
+              <h3>Machine Learning & Analytics</h3>
+              <p>Applying ML techniques to analyze spatial patterns and land use trends, offering actionable insights for urban planning and real estate. My models are built for interpretability, accuracy, and business value.</p>
+              <ul>
+                <li><i class="bi bi-check-circle"></i> Predictive analytics and classification models</li>
+                <li><i class="bi bi-check-circle"></i> Feature engineering and model evaluation</li>
+                <li><i class="bi bi-check-circle"></i> Real-world project: <strong>Customer Behavior Prediction</strong> (ML, Python)</li>
+                <li><i class="bi bi-check-circle"></i> Real-world project: <strong>Arrhythmia Detection Through ECG Data Analysis</strong> (Python, wfdb, psycopg2, PostgreSQL, matplotlib, scikit-learn, numpy, ipywidgets)</li>
+                <li><i class="bi bi-check-circle"></i> Real-world project: <strong>Fine-Tuning LLM Llama for Research Paper QA Generation</strong> (Python, Together AI, Llama, Transformers, Streamlit)</li>
+              </ul>
+              <div class="card mt-4 mb-4">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="assets/img/portfolio/detection.png" class="img-fluid rounded-start" alt="Arrhythmia Detection Screenshot">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Exploring Arrhythmia Detection Through ECG Data Analysis: A Comprehensive Study</h5>
+                      <p class="card-text"><strong>Type:</strong> Data Science · Healthcare · Machine Learning<br>
+                        <strong>Tech Stack:</strong> Python, wfdb, psycopg2, PostgreSQL, matplotlib, scikit-learn, numpy, ipywidgets</p>
+                      <p class="card-text"><strong>Overview:</strong> Large-scale ECG data analysis for arrhythmia detection, leveraging advanced preprocessing, visualization, and dimensionality reduction to support early diagnosis.</p>
+                      <ul>
+                        <li>Acquire, preprocess, and analyze ECG data</li>
+                        <li>Store and retrieve ECG signals and metadata in PostgreSQL</li>
+                        <li>Visualize ECG signals and attributes</li>
+                        <li>Apply PCA for dimensionality reduction and pattern discovery</li>
+                        <li>Support early diagnosis and management of arrhythmias</li>
+                      </ul>
+                      <p class="card-text"><strong>Technical Steps:</strong></p>
+                      <ul>
+                        <li>Data acquisition with wfdb and psycopg2</li>
+                        <li>Recursive directory traversal and data cleaning</li>
+                        <li>Storing ECG and metadata as JSON in PostgreSQL</li>
+                        <li>Visualization with matplotlib and widgets</li>
+                        <li>PCA for dimensionality reduction and 3D visualization</li>
+                      </ul>
+                      <p class="card-text"><strong>Code Highlights:</strong></p>
+                      <pre class="code-sample"># Fetch and store ECG data
+import wfdb, psycopg2, json
+...
+# Visualization and PCA
+import matplotlib.pyplot as plt
+from sklearn.decomposition import PCA
+...
+</pre>
+                      <p class="card-text"><strong>Output:</strong></p>
+                      <ul>
+                        <li>Cleaned, structured ECG data in PostgreSQL</li>
+                        <li>Interactive visualizations of ECG signals and attributes</li>
+                        <li>PCA-transformed 2D/3D plots for pattern discovery</li>
+                      </ul>
+                      <p class="card-text"><strong>Key Features:</strong> Handles large-scale ECG datasets, automated data cleaning and storage, comprehensive visualization, dimensionality reduction for insight discovery</p>
+                      <p class="card-text"><strong>Technologies Used:</strong> Python, wfdb, psycopg2, PostgreSQL, matplotlib, scikit-learn, numpy, ipywidgets</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card mt-4 mb-4">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="assets/img/portfolio/finetune.png" class="img-fluid rounded-start" alt="LLM Fine-Tuning Screenshot">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Fine-Tuning LLM Llama for Research Paper Question-Answer Generation</h5>
+                      <p class="card-text"><strong>Type:</strong> LLM · Fine-Tuning · NLP<br>
+                        <strong>Tech Stack:</strong> Python, Together AI, Llama, Transformers, Streamlit</p>
+                      <p class="card-text"><strong>Overview:</strong> This project automates the generation of question-answer pairs from research papers by fine-tuning the Llama LLM to capture the author's style and context.</p>
+                      <ul>
+                        <li>Data Preparation: Collect research papers in text format.</li>
+                        <li>QA Pair Generation: Use Together AI to generate QA pairs from text chunks.</li>
+                        <li>Fine-Tuning: Use transfer learning to fine-tune the Llama model on generated QA pairs.</li>
+                        <li>Model Evaluation: Assess coherence, relevance, and fluency.</li>
+                      </ul>
+                      <p class="card-text"><strong>Code Highlights:</strong></p>
+                      <pre class="code-sample"># Generate QA pairs with Together AI
+from together import Together
+client = Together(api_key="...")
+response = client.chat.completions.create(...)
+
+# Format QA pairs for fine-tuning
+def extract_qa_pairs(file_path):
+    ...
+
+# Streamlit app for inference
+import streamlit as st
+from transformers import AutoTokenizer, AutoModelForCausalLM
+...
+</pre>
+                      <p class="card-text"><strong>Output:</strong></p>
+                      <ul>
+                        <li>A fine-tuned Llama model for generating QA pairs from research papers</li>
+                        <li>A Streamlit app for model inference and testing</li>
+                      </ul>
+                      <p class="card-text"><strong>Key Features:</strong> Automated QA generation, maintains author's style, scalable</p>
+                      <p class="card-text"><strong>Technologies Used:</strong> Python, Together AI, Llama, Transformers, Streamlit</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Office Automation & API Integration Section -->
+            <section id="office-automation" class="mb-5">
+              <img src="assets/img/portfolio/vba.png" alt="VBA API Integration Screenshot" class="img-fluid services-img mb-3">
+              <h3>Office Automation & API Integration</h3>
+              <p>Building custom automation solutions in Microsoft Office using VBA, UserForms, and API integration. This enables real-time data access and workflow automation directly within Word, Excel, and other Office applications.</p>
+              <ul>
+                <li><i class="bi bi-check-circle"></i> Real-world project: <strong>Custom API Integration in Word with VBA</strong> (VBA, UserForm, MSXML2.XMLHTTP, JSON parsing)</li>
+              </ul>
+              <div class="card mt-4 mb-4">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="assets/img/portfolio/vba.png" class="img-fluid rounded-start" alt="VBA API Integration Screenshot">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Building a Custom API Integration in Microsoft Word with VBA and UserForm</h5>
+                      <p class="card-text"><strong>Type:</strong> Macro · VBA · API Integration<br>
+                        <strong>Tech Stack:</strong> VBA, MS Word, UserForm, MSXML2.XMLHTTP, JSON parsing</p>
+                      <p class="card-text"><strong>Overview:</strong> Word macro in VBA connects to an external API using a custom UserForm for user input. Securely stores API keys, sends requests, parses JSON, and inserts results into the document.</p>
+                      <ul>
+                        <li>Real-time API data integration in Word via VBA</li>
+                        <li>Custom UserForm for user-friendly input</li>
+                        <li>API key management and security</li>
+                        <li>JSON parsing and error handling</li>
+                        <li>Reusable for any API with similar structure</li>
+                      </ul>
+                      <p class="card-text"><strong>Technical Steps:</strong></p>
+                      <ul>
+                        <li>Enable Developer tab and set up VBA environment</li>
+                        <li>Add Microsoft Scripting Runtime and XML, v6.0 references</li>
+                        <li>Store API key in custom document property</li>
+                        <li>Create UserForm for user input (coordinates, address, etc.)</li>
+                        <li>Build FetchData subroutine to send API requests</li>
+                        <li>Parse JSON responses and insert data into Word</li>
+                        <li>Add error handling for API and JSON issues</li>
+                      </ul>
+                      <p class="card-text"><strong>Code Highlights:</strong></p>
+                      <pre class="code-sample">' Store API key in document property
+Sub InitializeAPIKey()
+ g_apiKey = GetDocumentProperty("APIKey")
+ If g_apiKey = "" Then
+  g_apiKey = InputBox("Enter your API key", "API Key")
+  If g_apiKey = "" Then Exit Sub
+  SetDocumentProperty "APIKey", g_apiKey
+ End If
+End Sub
+
+' UserForm input and API request
+Sub FetchData(lat As String, lng As String, address As String)
+    Dim url As String
+    Dim http As Object
+    Set http = CreateObject("MSXML2.XMLHTTP")
+    ' Build URL and send request
+    ...
+End Sub
+
+' Parse JSON and insert data
+Sub ParseAndDisplayData(responseText As String)
+    Dim jsonData As Object
+    Set jsonData = JsonConverter.ParseJson(responseText)
+    ...
+End Sub
+</pre>
+                      <p class="card-text"><strong>Output:</strong></p>
+                      <ul>
+                        <li>Word macro for API integration with UserForm</li>
+                        <li>Secure API key storage in document</li>
+                        <li>Dynamic data insertion from API into Word</li>
+                      </ul>
+                      <p class="card-text"><strong>Key Features:</strong> Custom UserForm, API key management, JSON parsing, error handling, reusable macro</p>
+                      <p class="card-text"><strong>Technologies Used:</strong> VBA, MS Word, UserForm, MSXML2.XMLHTTP, JSON parsing</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
           </div>
 
         </div>

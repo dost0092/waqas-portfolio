@@ -37,6 +37,31 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  <style>
+    .portfolio-category-title {
+      width: 100%;
+      text-align: left;
+      margin-top: 40px;
+      margin-bottom: 0px;
+      font-size: 24px;
+      font-weight: 700;
+      color: #444444;
+      text-transform: uppercase;
+      position: relative;
+      padding-bottom: 15px;
+    }
+
+    .portfolio-category-title::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 50px;
+      height: 3px;
+      background: #18d26e;
+      left: 0;
+      bottom: 0;
+    }
+  </style>
 </head>
 
 <script>
@@ -69,12 +94,16 @@
         loading.style.display = "none";
 
         if (response.ok) {
-          // Success - show success message
+          // Success - show success message only
           sentMessage.style.display = "block";
+          errorMessage.style.display = "none";
           form.reset();
         } else {
           // Handle Formspree validation errors
-          const data = await response.json();
+          let data = {};
+          try {
+            data = await response.json();
+          } catch (e) {}
           errorMessage.style.display = "block";
 
           // Check for Formspree's error format
@@ -94,6 +123,17 @@
   });
 </script>
   
+  <script>
+    // Always scroll to #hero on page load if no hash is present
+    document.addEventListener('DOMContentLoaded', function() {
+      if (!window.location.hash) {
+        var heroSection = document.getElementById('hero');
+        if (heroSection) {
+          heroSection.scrollIntoView({ behavior: 'auto' });
+        }
+      }
+    });
+  </script>
 
 <body class="index-page">
 
@@ -350,7 +390,7 @@ Skilled in building efficient ETL pipelines, crafting insightful dashboards, and
           </ul><!-- End Portfolio Filters -->
 
           <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-            
+
             <!-- User Monitoring Dashboard -->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-retool">
               <div class="portfolio-content h-100">
@@ -377,7 +417,7 @@ Skilled in building efficient ETL pipelines, crafting insightful dashboards, and
               </div>
             </div>
 
-            <!-- Financial Analytics Dashboard -->
+            <!-- Human Resource Dashboard -->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-powerbi">
               <div class="portfolio-content h-100">
                 <img src="assets/img/portfolio/hr_dash_demo.jpg" class="img-fluid" alt="">
@@ -403,60 +443,192 @@ Skilled in building efficient ETL pipelines, crafting insightful dashboards, and
               </div>
             </div>
 
+            <!-- City API Visualization -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/api_dashboard_demo.png" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>City API Visualization</h4>
+                  <p>Flask API with custom UI for city data visualization</p>
+                  <a href="assets/img/portfolio/api_dashboard_demo.png" title="City API Project" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="city-api-visualization-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
 
+            <!-- Global Suicide Rates Analysis -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-powerbi">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/suicide.png" class="img-fluid" alt="Global Suicide Rates Analysis">
+                <div class="portfolio-info">
+                  <h4>Global Suicide Rates Analysis</h4>
+                  <p>Exploring global suicide rates with Power BI to uncover trends, patterns, and regional disparities.</p>
+                  <a href="assets/img/portfolio/suicide.png" title="Global Suicide Rates Analysis" data-gallery="portfolio-gallery-powerbi" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="global-suicide-rates.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
 
+            <!-- Traffic Hotspot Analysis -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/grafana.png" class="img-fluid" alt="Grafana Traffic Hotspots">
+                <div class="portfolio-info">
+                  <h4>Traffic Hotspot Analysis (Grafana & Streamlit)</h4>
+                  <p>Analyze and visualize traffic hotspot data: shapefile to CSV, mapped in Grafana, interactive in Streamlit.</p>
+                  <a href="assets/img/portfolio/grafana.png" title="Grafana Traffic Hotspots" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="grafana-traffic-hotspots.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
 
-<!-- Data Science Project 2 (Scraping + Data Science Categories) -->
-<div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-scraping filter-datascience">
-  <div class="portfolio-content h-100">
-    <img src="assets/img/portfolio/scraping1.png" class="img-fluid" alt="">
-    <div class="portfolio-info">
-      <h4>Web Scraping & Data Engineering</h4>
-      <p>Comprehensive Python-based data extraction tool that scrapes multimedia and textual content from the Politifact
-        website.</p>
-      <a href="assets/img/portfolio/scraping1.png" title="Data Science Project" data-gallery="portfolio-gallery-app"
-        class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-      <a href="scraping.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-    </div>
-  </div>
-</div>
+            <!-- Sentiment Analysis (COVID-19 Tweets) -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/covid.png" class="img-fluid" alt="COVID-19 Sentiment Analysis">
+                <div class="portfolio-info">
+                  <h4>Sentiment Analysis (COVID-19 Tweets)</h4>
+                  <p>Analyzing and visualizing sentiment trends in COVID-19 tweets using Plotly to understand public perception.</p>
+                  <a href="assets/img/portfolio/covid.png" title="COVID-19 Sentiment Analysis" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="covid-sentiment-analysis.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
 
-<!-- City API Visualization -->
-<div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-  <div class="portfolio-content h-100">
-    <img src="assets/img/portfolio/api_dashboard_demo.png" class="img-fluid" alt="">
-    <div class="portfolio-info">
-      <h4>City API Visualization</h4>
-      <p>Flask API with custom UI for city data visualization</p>
-      <a href="assets/img/portfolio/api_dashboard_demo.png" title="City API Project"
-        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-      <a href="city-api-visualization-details.html" title="More Details" class="details-link"><i
-          class="bi bi-link-45deg"></i></a>
-    </div>
-  </div>
-</div>
+            <!-- Web Scraping & Data Engineering (Politifact) -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-scraping filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/scraping2.png" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Web Scraping & Data Engineering</h4>
+                  <p>Comprehensive Python-based data extraction tool that scrapes multimedia and textual content from the Politifact
+                    website.</p>
+                  <a href="assets/img/portfolio/scraping1.png" title="Data Science Project" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="scraping.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
 
-<!-- Data Science Project 1 -->
-<div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-  <div class="portfolio-content h-100">
-    <img src="assets/img/portfolio/ML1.png" class="img-fluid" alt="">
-    <div class="portfolio-info">
-      <h4>Predictive Analytics Model</h4>
-      <p>Machine learning model for predicting customer behavior</p>
-      <a href="assets/img/portfolio/ML1.png" title="Data Science Project" data-gallery="portfolio-gallery-app"
-        class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-      <a href="ML-Details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-    </div>
-  </div>
-</div>
+            <!-- Mastodon Web Scraper -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-scraping filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/scraping3.png" class="img-fluid" alt="Mastodon Scraper">
+                <div class="portfolio-info">
+                  <h4>Mastodon Web Scraper</h4>
+                  <p>Advanced Python-based scraper for Mastodon's Explore page, extracting images, audio, text, and video content.</p>
+                  <a href="assets/img/portfolio/scraping3.png" title="Mastodon Scraper Project" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="mastodon-scraper.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
 
+            <!-- Altnews Website Scraper -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-scraping filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/altnews.png" class="img-fluid" alt="Altnews Scraper">
+                <div class="portfolio-info">
+                  <h4>Altnews Website Scraper</h4>
+                  <p>Python-based tool for extracting images, audio, text, and video links from Altnews.in for misinformation research.</p>
+                  <a href="assets/img/portfolio/altnews.png" title="Altnews Scraper" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="altnews-scraper.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
 
+            <!-- From Data to Maps: ETL Pipeline -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/aws_rds.png" class="img-fluid" alt="AWS ETL Mapping">
+                <div class="portfolio-info">
+                  <h4>From Data to Maps: ETL Pipeline</h4>
+                  <p>End-to-end pipeline: extract, transform, and load address data from CSV to PostgreSQL/AWS RDS, with map visualization.</p>
+                  <a href="assets/img/portfolio/aws_rds.png" title="AWS ETL Mapping" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="aws-etl-mapping.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
 
-</div>
+            <!-- Custom API Integration in Word (VBA) -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/vba.png" class="img-fluid" alt="VBA API Integration">
+                <div class="portfolio-info">
+                  <h4>Custom API Integration in Word (VBA)</h4>
+                  <p>Word macro with UserForm for API integration: securely store API keys, send requests, parse JSON, and insert data into Word.</p>
+                  <a href="assets/img/portfolio/vba.png" title="VBA API Integration" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="vba-api-integration.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Predictive Analytics Model -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/ML1.png" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Predictive Analytics Model</h4>
+                  <p>Machine learning model for predicting customer behavior</p>
+                  <a href="assets/img/portfolio/ML1.png" title="Data Science Project" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="ML-Details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- LIDA with Streamlit & Preprocessing -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/lida.png" class="img-fluid" alt="LIDA Streamlit">
+                <div class="portfolio-info">
+                  <h4>LIDA with Streamlit & Preprocessing</h4>
+                  <p>LLM-powered tool for automated data visualization, Streamlit integration, and advanced preprocessing.</p>
+                  <a href="assets/img/portfolio/lida.png" title="LIDA Streamlit" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="lida-streamlit.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Arrhythmia Detection (ECG Analysis) -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/detection.png" class="img-fluid" alt="Arrhythmia Detection">
+                <div class="portfolio-info">
+                  <h4>Arrhythmia Detection (ECG Analysis)</h4>
+                  <p>ECG data analysis for arrhythmia detection using preprocessing, visualization, and PCA for dimensionality reduction.</p>
+                  <a href="assets/img/portfolio/detection.png" title="Arrhythmia Detection" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="arrhythmia-detection.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Fine-Tuning LLM Llama -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/finetune.png" class="img-fluid" alt="LLM Fine-Tuning">
+                <div class="portfolio-info">
+                  <h4>Fine-Tuning LLM Llama for Research Paper QA</h4>
+                  <p>Fine-tuning Llama on research papers to automate question-answer pair generation while maintaining author's style.</p>
+                  <a href="assets/img/portfolio/finetune.png" title="LLM Fine-Tuning" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="finetune-llm.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- RAG Zoning App -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/rag.png" class="img-fluid" alt="RAG Zoning App">
+                <div class="portfolio-info">
+                  <h4>Zoning & Land Use Q&A App (RAG)</h4>
+                  <p>Intelligent Q&A on zoning regulations using geospatial coordinates, RAG, and LLMs for legal interpretations.</p>
+                  <a href="assets/img/portfolio/rag.png" title="RAG Zoning App" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="rag-zoning-app.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
       </div>
-
-      </div>
-
     </section><!-- /Portfolio Section -->
 
 
