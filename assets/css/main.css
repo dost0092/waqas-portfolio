@@ -1258,9 +1258,69 @@ resume .resume-item {
 
 .iframe-cv {
   width: 100%;
-  height: 800px; /* Adjust as needed */
+  height: 100vh; /* Full viewport height */
+  min-height: 600px; /* Minimum height for smaller screens */
   border: none;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 0;
+  padding: 0;
+}
+
+/* Ensure the resume section takes full height */
+#resume {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#resume .container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+#resume .row {
+  flex: 1;
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .iframe-cv {
+    height: 90vh; /* Slightly smaller on mobile to account for browser UI */
+    min-height: 500px;
+  }
+  
+  #resume {
+    padding: 20px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .iframe-cv {
+    height: 85vh;
+    min-height: 400px;
+  }
+  
+  #resume {
+    padding: 15px 0;
+  }
+}
+
+/* Ensure PDF displays properly */
+.iframe-cv {
+  display: block;
+  background: #f8f9fa;
+}
+
+/* Add some spacing for the section title */
+#resume .section-title {
+  margin-bottom: 30px;
+}
+
+/* Ensure the iframe container takes full available space */
+#resume .col-12 {
+  padding: 0;
 }
 
 
